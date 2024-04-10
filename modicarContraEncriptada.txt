@@ -1,0 +1,3 @@
+$user = App\Models\User::find(ID_DEL_USUARIO_A_MODIFICAR);
+$user->password = bcrypt('nueva_contraseña');
+$user->save();

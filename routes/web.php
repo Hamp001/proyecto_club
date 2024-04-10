@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\LoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,8 @@ Route::get('/', function () {
 });
 // ruta de registro
 Route::get('/registro', [RegistroController::class, 'index'])->name('registro');
+// ruta para manejar evento de login
+Route::post('/iniciarSesion', [LoginController::class, 'login'])->name('iniciarSesion');
 
 // php artisan cache:clear    
 // php artisan route:cache  

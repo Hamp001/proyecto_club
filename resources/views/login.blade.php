@@ -15,10 +15,11 @@
             <div class="card">
                 <div class="card-header">Inicio de sesión</div>
                 <div class="card-body">
-                    <form action="procesar_login.php" method="post">
+                    <form action="iniciarSesion" method="POST">
+                        @csrf
                         <div class="form-group">
-                            <label for="username">Usuario:</label>
-                            <input type="text" class="form-control" id="username" name="username" required>
+                            <label for="email">Usuario:</label>
+                            <input type="text" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña:</label>
